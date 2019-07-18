@@ -4,11 +4,13 @@
 
   const dispatch = createEventDispatcher();
 
+  // This function sends a "close" event to anything that listens
   function close() {
     dispatch("close");
   }
 </script>
 
+<!-- the on:close prop uses the close() function to dispatch the close event -->
 <Modal on:close={close}>
   <h2 slot="header">
     modal
